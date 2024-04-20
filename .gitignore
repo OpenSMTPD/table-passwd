@@ -4,6 +4,7 @@
 
 **/.deps
 **/Makefile
+**/Makefile.in
 **/aclocal.m4
 **/.dirstamp
 **/autom4te.cache
