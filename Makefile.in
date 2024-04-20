@@ -38,3 +38,6 @@ install:
 	${MKDIR_P} ${DESTDIR}${MANDIR}/man5/
 	${INSTALL_PROGRAM} ${PROG} ${DESTDIR}${SMTPDIR}
 	${INSTALL_MAN} table-passwd.5 ${DESTDIR}${MANDIR}/man5/${PROG}.5
+
+README.md: table-passwd.5
+	mandoc -Tmarkdown -l table-passwd.5 > README.md
