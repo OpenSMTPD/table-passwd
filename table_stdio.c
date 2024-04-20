@@ -26,7 +26,7 @@
 #include <string.h>
 
 #include "dict.h"
-#include "stdio.h"
+#include "table_stdio.h"
 
 static int (*handler_update)(void);
 static int (*handler_check)(int, struct dict *, const char *);

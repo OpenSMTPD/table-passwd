@@ -29,8 +29,8 @@
 #include <unistd.h>
 
 #include "dict.h"
-#include "stdio.h"
 #include "log.h"
+#include "table_stdio.h"
 #include "util.h"
 
 static char	       *config;
