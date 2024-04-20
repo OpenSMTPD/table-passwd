@@ -1,0 +1,40 @@
+PROG =		table-passwd
+SRCS =		table_passwd.c dict.c log.c stdio.c util.c
+COMPATS =	
+OBJS =		${SRCS:.c=.o} @LIBOBJS@
+
+DEBUG =		-O0 -g3 -U_FORTIFY_SOURCE -Wno-cpp
+
+CC =		@CC@
+CFLAGS =	@CFLAGS@ ${DEBUG}
+
+INSTALL =	install
+INSTALL_MAN =	${INSTALL} -m 0444
+INSTALL_PROGRAM=${INSTALL} -m 0555
+LIBOBJDIR =	openbsd-compat/
+MKDIR_P =	mkdir -p
+PREFIX =	@prefix@
+
+MANDIR =	@mandir@
+SMTPDIR =	${PREFIX}/libexec/smtpd
+
+datarootdir =	@datarootdir@
+
+all: ${PROG}
+
+.PHONY: all clean install
+
+${PROG}: ${OBJS}
+	${CC} -o ${PROG} ${OBJS}
+
+.c.o:
+	${CC} ${CFLAGS} -c -o $@  $<
+
+clean:
+	rm -f ${OBJS}
+
+install:
+	${MKDIR_P} ${DESTDIR}${SMTPDIR}/
+	${MKDIR_P} ${DESTDIR}${MANDIR}/man5/
+	${INSTALL_PROGRAM} ${PROG} ${DESTDIR}${SMTPDIR}
+	${INSTALL_MAN} table-passwd.5 ${DESTDIR}${MANDIR}/man5/${PROG}.5

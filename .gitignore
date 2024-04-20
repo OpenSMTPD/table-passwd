@@ -1,0 +1,16 @@
+**/*~
+**/*.o
+
+**/.deps
+**/Makefile
+**/aclocal.m4
+**/.dirstamp
+**/autom4te.cache
+**/config.h
+**/config.h.in
+**/config.log
+**/config.status
+**/configure
+**/stamp-h1
+
+table-passwd
