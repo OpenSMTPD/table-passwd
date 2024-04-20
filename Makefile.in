@@ -3,7 +3,7 @@ SRCS =		table_passwd.c dict.c log.c stdio.c util.c
 COMPATS =	
 OBJS =		${SRCS:.c=.o} @LIBOBJS@
 
-DEBUG =		-O0 -g3 -U_FORTIFY_SOURCE -Wno-cpp
+# DEBUG =		-O0 -g3 -U_FORTIFY_SOURCE -Wno-cpp
 
 CC =		@CC@
 CFLAGS =	@CFLAGS@ ${DEBUG}
