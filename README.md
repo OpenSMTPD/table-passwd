@@ -65,6 +65,7 @@ smtpd(8)
 The first version of
 **table\_passwd**
 was written in 2013.
+It was converted to the stdio table protocol in 2024.
 
 # AUTHORS
 
@@ -73,5 +74,7 @@ was intially written by
 Gilles Chehade &lt;[gilles@poolp.org](mailto:gilles@poolp.org)&gt;
 and further improved by
 Joerg Jung &lt;[jung@openbsd.org](mailto:jung@openbsd.org)&gt;.
+The conversion to the stdio table protocol was done by
+Omar Polo &lt;[op@openbsd.org](mailto:op@openbsd.org)&gt;.
 
-Nixpkgs - February 4, 2014
+Nixpkgs - April 4, 2024
