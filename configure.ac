@@ -1,5 +1,4 @@
 AC_INIT([table-passwd], [0.1], [bugs@opensmtpd.org])
-AC_CONFIG_AUX_DIR(etc)
 AC_CONFIG_LIBOBJ_DIR(openbsd-compat)
 AC_PROG_CC
 AC_USE_SYSTEM_EXTENSIONS
