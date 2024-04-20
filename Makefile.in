@@ -66,3 +66,17 @@ dist:
 	cp -R openbsd-compat/tree/sys/tree.h .dist/${DISTNAME}/openbsd-compat/tree/sys
 	cd .dist/ && tar zcf ../${DISTNAME}.tar.gz ${DISTNAME}
 	rm -rf .dist
+
+# dependency tracking
+-include dict.d
+-include log.d
+-include stdio.d
+-include table_passwd.d
+-include util.d
+-include openbsd-compat/asprintf.d
+-include openbsd-compat/err.d
+-include openbsd-compat/getprogname.d
+-include openbsd-compat/strlcat.d
+-include openbsd-compat/strlcpy.d
+-include openbsd-compat/strsep.d
+-include openbsd-compat/strtonum.d

@@ -30,6 +30,19 @@ AC_CHECK_HEADER([sys/tree.h], [], [
 	CFLAGS="$CFLAGS -I$srcdir/openbsd-compat/tree"
 ])
 
+AC_DEFUN([CC_ADD_CHECK_FLAGS], [
+	AC_MSG_CHECKING([if $CC supports $1 flag])
+	old_CFLAGS="$CFLAGS"
+	CFLAGS="$CFLAGS $1"
+	AC_COMPILE_IFELSE([AC_LANG_PROGRAM([], [])], [
+		AC_MSG_RESULT(yes)
+	], [
+		AC_MSG_RESULT(no)
+		CFLAGS="$old_CFLAGS"
+	])
+])
+CC_ADD_CHECK_FLAGS([-MMD])
+
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
 	Makefile
