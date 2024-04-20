@@ -27,10 +27,6 @@ AC_REPLACE_FUNCS([ \
 
 CFLAGS="$CFLAGS -I$srcdir/openbsd-compat"
 
-AC_CHECK_HEADER([sys/queue.h], [], [
-	CFLAGS="$CFLAGS -I$srcdir/openbsd-compat/tree"
-])
-
 AC_CHECK_HEADER([sys/tree.h], [], [
 	CFLAGS="$CFLAGS -I$srcdir/openbsd-compat/tree"
 ])
