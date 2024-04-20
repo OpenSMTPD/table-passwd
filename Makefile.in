@@ -14,6 +14,7 @@ INSTALL_PROGRAM=${INSTALL} -m 0555
 LIBOBJDIR =	openbsd-compat/
 MKDIR_P =	mkdir -p
 PREFIX =	@prefix@
+prefix =	@prefix@
 
 MANDIR =	@mandir@
 SMTPDIR =	${PREFIX}/libexec/smtpd
