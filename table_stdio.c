@@ -242,7 +242,7 @@ table_api_dispatch(void)
 			r = handler_lookup(service_id(service), &params, key,
 			    buf, sizeof(buf));
 			if (r == 1)
-				printf("lookup-result|%s|found|%s\n", id, key);
+				printf("lookup-result|%s|found|%s\n", id, buf);
 			else if (r == 0)
 				printf("lookup-result|%s|not-found\n", id);
 			else
