@@ -2,8 +2,9 @@ noinst_PROGRAMS =	table-passwd
 
 table_passwd_SOURCES =	table_passwd.c dict.c log.c table_stdio.c util.c
 
-AM_CFLAGS =
 LDADD =			$(LIBOBJS)
+
+dist_man5_MANS =	table-passwd.5
 
 smtpdir =		${prefix}/libexec/smtpd
 
