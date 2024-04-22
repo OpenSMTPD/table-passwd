@@ -77,4 +77,4 @@ Joerg Jung &lt;[jung@openbsd.org](mailto:jung@openbsd.org)&gt;.
 The conversion to the stdio table protocol was done by
 Omar Polo &lt;[op@openbsd.org](mailto:op@openbsd.org)&gt;.
 
-Nixpkgs - April 4, 2024
+OpenBSD 7.5 - April 4, 2024
