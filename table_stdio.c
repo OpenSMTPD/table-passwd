@@ -151,7 +151,6 @@ table_api_dispatch(void)
 				continue;
 			}
 
-			warnx("ignoring configuration: %s", t);
 			continue;
 		}
 
