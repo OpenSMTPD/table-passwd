@@ -78,7 +78,7 @@ service_id(const char *service)
 	if (!strcmp(service, "mailaddrmap"))
 		return (K_MAILADDRMAP);
 
-	err(1, "unknown service %s", service);
+	errx(1, "unknown service %s", service);
 }
 
 void
