@@ -70,7 +70,7 @@ It was converted to the stdio table protocol in 2024.
 # AUTHORS
 
 **table\_passwd**
-was intially written by
+was initially written by
 Gilles Chehade &lt;[gilles@poolp.org](mailto:gilles@poolp.org)&gt;
 and further improved by
 Joerg Jung &lt;[jung@openbsd.org](mailto:jung@openbsd.org)&gt;.
