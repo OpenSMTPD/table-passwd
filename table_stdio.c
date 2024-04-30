@@ -38,24 +38,6 @@ static char		 tablename[128];
 /* Dummy; just kept for backward compatibility */
 static struct dict	 params;
 
-static const char *
-service_name(int service)
-{
-	switch (service) {
-	case K_ALIAS:		return ("alias");
-	case K_DOMAIN:		return ("domain");
-	case K_CREDENTIALS:	return ("credentials");
-	case K_NETADDR:		return ("netaddr");
-	case K_USERINFO:	return ("userinfo");
-	case K_SOURCE:		return ("source");
-	case K_MAILADDR:	return ("mailaddr");
-	case K_ADDRNAME:	return ("addrname");
-	case K_MAILADDRMAP:	return ("mailaddrmap");
-	}
-
-	err(1, "unknown service %d", service);
-}
-
 static int
 service_id(const char *service)
 {
@@ -141,11 +123,17 @@ table_api_dispatch(void)
 				 * we don't have a clue what the table
 				 * will do.
 				 */
-				for (i = 0; i <= K_MAILADDRMAP; ++i) {
-					printf("register|%s\n",
-					    service_name(i));
-				}
-				printf("register|ready\n");
+				puts("register|alias");
+				puts("register|domain");
+				puts("register|credentials");
+				puts("register|netaddr");
+				puts("register|userinfo");
+				puts("register|source");;
+				puts("register|mailaddr");
+				puts("register|addrname");
+				puts("register|mailaddrmap");
+
+				puts("register|ready");
 				if (fflush(stdout) == EOF)
 					err(1, "fflush");
 				continue;

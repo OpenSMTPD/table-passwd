@@ -16,16 +16,16 @@
  */
 
 enum table_service {
-	K_ALIAS,	/* returns struct expand	*/
-	K_DOMAIN,	/* returns struct destination	*/
-	K_CREDENTIALS,	/* returns struct credentials	*/
-	K_NETADDR,	/* returns struct netaddr	*/
-	K_USERINFO,	/* returns struct userinfo	*/
-	K_SOURCE,	/* returns struct source	*/
-	K_MAILADDR,	/* returns struct mailaddr	*/
-	K_ADDRNAME,	/* returns struct addrname	*/
-	K_MAILADDRMAP,	/* returns struct mailaddr	*/
-	K_ANY,
+	K_ALIAS =	0x001,	/* returns struct expand	*/
+	K_DOMAIN =	0x002,	/* returns struct destination	*/
+	K_CREDENTIALS =	0x004,	/* returns struct credentials	*/
+	K_NETADDR =	0x008,	/* returns struct netaddr	*/
+	K_USERINFO =	0x010,	/* returns struct userinfo	*/
+	K_SOURCE =	0x020,	/* returns struct source	*/
+	K_MAILADDR =	0x040,	/* returns struct mailaddr	*/
+	K_ADDRNAME =	0x080,	/* returns struct addrname	*/
+	K_MAILADDRMAP =	0x100,	/* returns struct mailaddr	*/
+	K_ANY =		0xfff,
 };
 
 void		 table_api_on_update(int(*)(void));
